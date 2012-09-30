@@ -1,7 +1,4 @@
-/*global window: false */
 (function (cordova) {
-
-	"use strict";
 
 	var SocialMessage = function () {
 
@@ -12,11 +9,15 @@
 			"Mail", "Print", "CopyToPasteboard", "AssignToContact", "SaveToCameraRoll"];
 	}
 
-	SocialMessage.prototype.send = function (success, failure, message, activityTypes) {
-		if (activityTypes !== undefined || activityTypes === null) {
+	SocialMessage.prototype.send = function (message, activityTypes) {
+		if (typeof (activityTypes) === "undefined" || activityTypes === null) {
 			activityTypes = getAllActivityTypes();
 		}
-		cordova.exec(success, failure, "SocialMessage", "Send", [message, activityTypes]);
+		var options = {
+			"message": message,
+			"activityTypes": activityTypes.join(",")
+		};
+		cordova.exec(null, null, "SocialMessage", "send", [options]);
 	};
 
 	if (!window.plugins) {
