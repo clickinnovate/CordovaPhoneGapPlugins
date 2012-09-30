@@ -10,7 +10,7 @@ Supports: Facebook, Twitter, Weibo, Message, Email, Print, Clipboard, Contact, C
 
 This plugin requires [Apache Cordova](http://incubator.apache.org/cordova/) and Xcode.
 
-It has been tested using Cordova 2.1 and Xcode 4.5
+It has been tested using Cordova 2.1 and Xcode 4.5.
 
 
 ## 3 Step Installation
@@ -30,7 +30,7 @@ Which will allow the message to be shared with all built in activity types.
 
 If you want to specify activity types to include, you can add an array argument such as:
 
-	window.plugins.socialmessage.send("This is a test message", ["PostToFacebook", "PostToTwitter"])
+	window.plugins.socialmessage.send("This is a test message", ["PostToFacebook", "PostToTwitter"]);
 	
 This example will only allow the user to post the message to Facebook or Twitter.
 
@@ -39,7 +39,7 @@ A complete list of activity types can be found [here](http://developer.apple.com
 
 ## Note
 
-Native share features are only supported in iOS >= 6 (planning to implement an email only share fallback for iOS < 6)
+Native share features are only supported in iOS >= 6 (planning to implement an email only share fallback for iOS < 6).
 
 Copyright [Click Innovate](http://www.clickinnovate.com/).
 
