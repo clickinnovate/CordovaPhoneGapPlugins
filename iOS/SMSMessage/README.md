@@ -11,7 +11,7 @@ This plugin requires [Apache Cordova](http://incubator.apache.org/cordova/) and 
 It has been tested using Cordova 2.1 and Xcode 4.5.
 
 
-## 3 Step Installation
+## Installation
 
 1. Add the SMSMessage.h and SMSMessage.m files to Plugins directory in your Xcode project.
 2. Add the sms-message.js file to your "www" directory and add reference(s) to sms-message.js in your html file(s). This should be done after your reference to the cordova.js file.
