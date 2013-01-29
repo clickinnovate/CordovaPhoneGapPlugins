@@ -13,7 +13,7 @@ This plugin requires [Apache Cordova](http://incubator.apache.org/cordova/) and 
 It has been tested using Cordova 2.1.0 - Cordova 2.4.0 and Xcode 4.5.0 - 4.5.2.
 
 
-## 3 Step Installation
+## Installation
 
 1. Add the SocialMessage.h and SocialMessage.m files to Plugins directory in your Xcode project.
 
@@ -21,10 +21,10 @@ It has been tested using Cordova 2.1.0 - Cordova 2.4.0 and Xcode 4.5.0 - 4.5.2.
 
 3. Add the plugin reference.
 	- If using Cordova <= 2.2.0: Open the Cordova.plist under the Resources directory in your Xcode project. Add an identical key and value of SocialMessage.
-	- If using Cordova >= 2.3.0: Open the config.xml and add the following child element to the <plugins> element:
+	- If using Cordova >= 2.3.0: Open the config.xml and add the following child element to the &lt;plugins&gt; element:
+		&lt;plugin name="SocialMessage" value="SocialMessage" /&gt;
 
-	&lt;plugin name="SocialMessage" value="SocialMessage" /&gt;
-
+4. Add a reference to MessageUI.framework under "linked frameworks and libraries" in your target. This is required for the email only share fallback (iOS < 6).
 
 ## Usage
 
@@ -45,7 +45,7 @@ A complete list of activity types can be found [here](http://developer.apple.com
 
 ## Note
 
-Native share features are only supported in iOS >= 6 (planning to implement an email only share fallback for iOS < 6).
+Native share features are only supported in iOS >= 6 (An email only share fallback has been implemented for iOS < 6).
 
 Copyright [Click Innovate](http://www.clickinnovate.com/).
 

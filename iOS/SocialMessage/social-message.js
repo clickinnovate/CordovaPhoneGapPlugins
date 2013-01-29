@@ -10,6 +10,10 @@
 	}
 
 	SocialMessage.prototype.send = function (message, activityTypes) {
+		if (device.version < 6) {
+			emailShareFallback(message);
+			return;
+		}
 		if (typeof (activityTypes) === "undefined" || activityTypes === null) {
 			activityTypes = getAllActivityTypes();
 		}
@@ -19,6 +23,13 @@
 		};
 		cordova.exec(null, null, "SocialMessage", "send", [options]);
 	};
+	
+	function emailShareFallback(message) {
+		var options = {
+			"message": message,
+		};
+		cordova.exec(null, null, "SocialMessage", "sendEmailFallback", [options]);
+	}
 
 	if (!window.plugins) {
 		window.plugins = {};

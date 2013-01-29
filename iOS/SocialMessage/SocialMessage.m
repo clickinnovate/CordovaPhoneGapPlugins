@@ -61,4 +61,49 @@
 	[activity release];
 }
 
+- (void) sendEmailFallback:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options
+{
+	NSString *message = [options objectForKey:@"message"];
+		
+	Class mailClass = (NSClassFromString(@"MFMailComposeViewController"));
+		
+	if (mailClass != nil && [mailClass canSendMail])
+	{
+		MFMailComposeViewController *composer = [[MFMailComposeViewController alloc] init];
+		composer.mailComposeDelegate = self;
+		
+		[composer setMessageBody:message isHTML:FALSE];
+		
+		[self.viewController presentModalViewController:composer animated:TRUE];
+		[composer release];
+	}
+	else
+	{
+		[self showNoMailMessage];
+	}
+}
+	
+- (void) mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+	bool sent = FALSE;
+	
+	if (result == MFMailComposeResultSent)
+	{
+		sent = TRUE;
+	}
+	
+	[self.viewController dismissModalViewControllerAnimated:TRUE];
+		
+	NSString* jsString = [[NSString alloc] initWithFormat:@"window.plugins.emailshare.closed(%d);", sent];
+	
+	[self writeJavascript:jsString];
+	[jsString release];
+}
+	
+- (IBAction) showNoMailMessage
+{
+	UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Email Configuration" message:@"You must have an email account setup on your device to use the share feature." delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil];
+	[message show];
+}
+
 @end
