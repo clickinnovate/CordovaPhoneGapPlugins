@@ -10,14 +10,18 @@ Supports: Facebook, Twitter, Weibo, Message, Email, Print, Clipboard, Contact, C
 
 This plugin requires [Apache Cordova](http://incubator.apache.org/cordova/) and Xcode.
 
-It has been tested using Cordova 2.1 and Xcode 4.5.
+It has been tested using Cordova 2.1.0 - Cordova 2.4.0 and Xcode 4.5.0 - 4.5.2.
 
 
 ## 3 Step Installation
 
 1. Add the SocialMessage.h and SocialMessage.m files to Plugins directory in your Xcode project.
 2. Add the social-message.js file to your "www" directory and add reference(s) to social-message.js in your html file(s). This should be done after your reference to the cordova.js file.
-3. Open the Cordova.plist under the Resources directory in your Xcode project. Add an identical key and value of SocialMessage.
+3.
+	- If using Cordova <= 2.2.0: Open the Cordova.plist under the Resources directory in your Xcode project. Add an identical key and value of SocialMessage.
+	- If using Cordova >= 2.3.0: Open the config.xml and add the following child element to the <plugins> element:
+		
+		<plugin name="SocialMessage" value="SocialMessage" />
 
 
 ## Usage
