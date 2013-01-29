@@ -5,6 +5,8 @@ Plugins in this repository are dependent on the [Apache Cordova](http://incubato
 
 Please see individual Plugin directories for details on features, installation and usage.
 
+![Click Innovate](http://www.clickinnovate.com/files/2012/09/clickinnovate_logo.png)
+
 Copyright [Click Innovate](http://www.clickinnovate.com/).
 
 
