@@ -23,7 +23,7 @@ It has been tested using Cordova 2.1.0 - Cordova 2.4.0 and Xcode 4.5.0 - 4.5.2.
 	- If using Cordova <= 2.2.0: Open the Cordova.plist under the Resources directory in your Xcode project. Add an identical key and value of SocialMessage.
 	- If using Cordova >= 2.3.0: Open the config.xml and add the following child element to the <plugins> element:
 
-	<plugin name="SocialMessage" value="SocialMessage" />
+	&lt;plugin name="SocialMessage" value="SocialMessage" /&gt;
 
 
 ## Usage
