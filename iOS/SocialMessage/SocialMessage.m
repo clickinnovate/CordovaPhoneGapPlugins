@@ -85,19 +85,7 @@
 	
 - (void) mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
-	bool sent = FALSE;
-	
-	if (result == MFMailComposeResultSent)
-	{
-		sent = TRUE;
-	}
-	
 	[self.viewController dismissModalViewControllerAnimated:TRUE];
-		
-	NSString* jsString = [[NSString alloc] initWithFormat:@"window.plugins.emailshare.closed(%d);", sent];
-	
-	[self writeJavascript:jsString];
-	[jsString release];
 }
 	
 - (IBAction) showNoMailMessage
