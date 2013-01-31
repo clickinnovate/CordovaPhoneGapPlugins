@@ -8,14 +8,17 @@ Cordova / PhoneGap Plugin for iOS to utilise SMS text messaging.
 
 This plugin requires [Apache Cordova](http://incubator.apache.org/cordova/) and Xcode.
 
-It has been tested using Cordova 2.1 and Xcode 4.5.
+It has been tested using Cordova 2.1.0 - Cordova 2.4.0 and Xcode 4.5.0 - 4.5.2.
 
 
 ## Installation
 
 1. Add the SMSMessage.h and SMSMessage.m files to Plugins directory in your Xcode project.
 2. Add the sms-message.js file to your "www" directory and add reference(s) to sms-message.js in your html file(s). This should be done after your reference to the cordova.js file.
-3. Open the Cordova.plist under the Resources directory in your Xcode project. Add an identical key and value of SMSMessage.
+3. Add the plugin reference.
+	- If using Cordova <= 2.2.0: Open the Cordova.plist under the Resources directory in your Xcode project. Add an identical key and value of SMSMessage.
+	- If using Cordova >= 2.3.0: Open the config.xml and add the following child element to the &lt;plugins&gt; element:
+		&lt;plugin name="SMSMessage" value="SMSMessage" /&gt;
 4. Add a reference to MessageUI.framework under "linked frameworks and libraries" in your target.
 
 
