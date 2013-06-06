@@ -5,7 +5,7 @@ Cordova / PhoneGap Plugin for iOS to utilise native share features using built i
 
 Supports: Facebook, Twitter, Weibo, Message, Email, Print, Clipboard, Contact, Camera Roll.
 
-This plugin is also available for [Android](https://github.com/ClickInnovate/CordovaPhoneGapPlugins/tree/master/Android/SocialMessage)
+This plugin is also available for [Android](https://github.com/ClickInnovate/CordovaPhoneGapPlugins/tree/master/Android/SocialMessage) and [Windows Phone 8](https://github.com/ClickInnovate/CordovaPhoneGapPlugins/tree/master/Windows%20Phone%208/SocialMessage).
 
 
 ## Prerequisites

@@ -3,7 +3,7 @@ Social Message
 
 Cordova / PhoneGap Plugin for Android to utilise native share features.
 
-This plugin is also available for [iOS](https://github.com/ClickInnovate/CordovaPhoneGapPlugins/tree/master/iOS/SocialMessage)
+This plugin is also available for [iOS](https://github.com/ClickInnovate/CordovaPhoneGapPlugins/tree/master/iOS/SocialMessage) and [Windows Phone 8](https://github.com/ClickInnovate/CordovaPhoneGapPlugins/tree/master/Windows%20Phone%208/SocialMessage).
 
 
 ## Prerequisites
