@@ -15,7 +15,7 @@ import org.apache.cordova.api.CordovaPlugin;
 public class SocialMessage extends CordovaPlugin {
 
 	@Override
-		public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 		doSendIntent(args.getJSONObject(0).getString("message")); 
 		return true;
 	}
