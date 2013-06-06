@@ -1,12 +1,35 @@
-Cordova / PhoneGap Plugins
-==========================
+Social Message
+==============
 
-Plugins in this repository are dependent on the [Apache Cordova](http://incubator.apache.org/cordova/) project / [PhoneGap](http://www.phonegap.com/). 
+Cordova / PhoneGap Plugin for Android to utilise native share features.
 
-Please see individual Plugin directories for details on features, installation and usage.
+This plugin is also available for [iOS](https://github.com/ClickInnovate/CordovaPhoneGapPlugins/tree/master/iOS/SocialMessage)
+
+
+## Prerequisites
+
+This plugin requires [Apache Cordova](http://incubator.apache.org/cordova/).
+
+
+## Installation
+
+1. Add SocialMessage.java to your project src.
+
+2. Add the social-message.js file to your "www" directory and add reference(s) to social-message.js in your html file(s). This should be done after your reference to the cordova.js file.
+
+3. Add the plugin reference to your config.xml (res/xml/config.xml) by adding the following child element to the &lt;plugins&gt; element:
+		&lt;plugin name="SocialMessage" value="com.clickinnovate.SocialMessage" /&gt;
+
+## Usage
+
+After your deviceready event has been fired, you can simply pass your message as an argument:
+
+	window.plugins.socialmessage.send("This is a test message");
+
+Which will allow the message to be shared using the native share features available on Android.
+
 
 <br/> <br/>
-![Click Innovate](http://www.clickinnovate.com/files/2012/09/clickinnovate_logo.png)
 
 Copyright [Click Innovate](http://www.clickinnovate.com/).
 

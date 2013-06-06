@@ -8,8 +8,6 @@ Cordova / PhoneGap Plugin for iOS to utilise SMS text messaging.
 
 This plugin requires [Apache Cordova](http://incubator.apache.org/cordova/) and Xcode.
 
-It has been tested using Cordova 2.1.0 - Cordova 2.4.0 and Xcode 4.5.0 - 4.5.2.
-
 
 ## Installation
 
