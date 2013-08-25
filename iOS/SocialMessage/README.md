@@ -1,3 +1,5 @@
+### NOTE: This plugin is now outdated. If you're using Cordova >= 3.0.0 please see the new plugin [here](https://github.com/leecrossley/cordova-plugin-social-message).
+
 Social Message
 ==============
 
